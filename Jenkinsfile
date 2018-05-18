@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('merge with master') {
       steps {
-        bat(script: 'git merge develop', returnStatus: true, returnStdout: true)
+        bat(script: 'git checkout develop && git merge develop', returnStatus: true, returnStdout: true)
       }
     }
   }
