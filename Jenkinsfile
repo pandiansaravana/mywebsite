@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('merge with master') {
+    stage('Deploy') {
       steps {
-        bat(script: 'git checkout develop && git merge develop', returnStatus: true, returnStdout: true)
+        bat(script: 'cp index.html C:\\pandian_website', returnStatus: true, returnStdout: true)
       }
     }
   }
